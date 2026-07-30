@@ -1,0 +1,15 @@
+import pandas as pd
+df = pd.read_csv("employee_data.csv")
+print(df)
+#MEthods  1 
+print("First 5 Row")
+print(df.head())
+print("To get the random row")
+print(df.tail(3))
+print(df.sample(3))
+print("To find the data Information")
+print(df.info())
+print(df.shape)
+print(df.describe())
+print(df.columns)
+print(df.nunique())
