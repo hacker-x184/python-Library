@@ -2,7 +2,22 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 # Create your views here.
 def home(request):
-    return render(request,"index.html")
+    
+    people = [
+        {'name': 'Abhijeet Gupta' , 'age' : 26},
+        {'name' : 'Rohan Sharma' , 'age' : 23},
+        {'name' : 'Vicky Kaushal' , 'age' : 17},
+        {'name' : 'DeepanShu chaurasiya' , 'age' : 16},
+        {'name' : 'Sandeep' , 'age' : 63}
+    ]
+    text ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut quidem sed magni qui pariatur aspernatur at doloremque quae accusamus? Nam quod modi fugit quis odio ut molestias quaerat saepe!"
+    
+    return render(request,"index.html",context= {'peoples':people,"text":text})
+def about(request):
+    return render(request,"about.html")
+def contact(request):
+    return render(request,"contact.html")
+    
 def succesful_page(request):
     return HttpResponse('''<h1>This is a Success page Thanks for coming</h>
                         <br>
