@@ -6,8 +6,8 @@ class Student(models.Model):
     # id = models.AutoField()
     name = models.CharField(max_length=70)
     age = models.IntegerField()
-    email = models.EmailField()
-    address = models.TextField()
+    email = models.EmailField(null=True, blank=True)
+    address = models.TextField(null=True, blank=True)
     image = models.ImageField()
     file= models.FileField()
 class Product(models.Model):
