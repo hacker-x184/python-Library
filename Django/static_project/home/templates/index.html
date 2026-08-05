@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Free-Time</title>
-    <link rel="stylesheet" href="{%'home/style.css'%}">
+    <link rel="stylesheet" href="{static %'home/style.css'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=TASA+Explorer:wght@400..800&display=swap" rel="stylesheet">
@@ -25,7 +26,7 @@
         </nav>
     </header>
     <main class="main" id="home">
-        <img class="pic" src="{%'home/logo.png'%}" alt="">
+        <img class="pic" src="{% static 'home/logo.png'%}" alt="">
         <div class="content">
             <div class="intro">Hi, It's <span class="st_anim">Inzamam</span></div>
             <div class="learn">I'm a <span class="st_anim">losser</span></div>
