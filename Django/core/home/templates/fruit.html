@@ -1,0 +1,7 @@
+{% block start %}
+Fruit
+              {% for fruit in fruits %}
+                  <p>{{forloop.counter}}.{{fruit}}</p>
+            {% endfor %}
+
+{%endblock%}

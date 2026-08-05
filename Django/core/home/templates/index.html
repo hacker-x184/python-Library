@@ -3,9 +3,21 @@
 <h1>This is index page</h1>
         <a href="/contact/">
               Contact
-        </a>
-|
+        </a>      
+            <br>
+            <h1>Students</h1>
+            {% for students in students %}
+                  <p>{{students}}</p>
+            {% endfor %}
          <a href="/contact/">
               Contact
+        </a>
+        <br>
+        <a href="/filtter/">
+              filtter
+        </a>
+        <br>
+        <a href="/fruit/">
+              Fruit
         </a>
         {%endblock%}

@@ -3,44 +3,41 @@ from django.http import HttpResponse
 # Create your views here.
 def home(request):
     
-    people = [
-        {'name': 'Abhijeet Gupta' , 'age' : 26},
-        {'name' : 'Rohan Sharma' , 'age' : 23},
-        {'name' : 'Vicky Kaushal' , 'age' : 17},
-        {'name' : 'DeepanShu chaurasiya' , 'age' : 16},
-        {'name' : 'Sandeep' , 'age' : 63}
+    students = [
+        "Naruto",
+        "Luffy",
+        "Zoro",
+        "Itachi",
+        "Gojo"
     ]
-    text ="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima ut quidem sed magni qui pariatur aspernatur at doloremque quae accusamus? Nam quod modi fugit quis odio ut molestias quaerat saepe!"
-    
-    return render(request,"index.html",context= {'peoples':people,"text":text})
+
+    return render(request,"index.html",context={"students":students})
 def about(request):
     return render(request,"about.html")
 def contact(request):
     return render(request,"contact.html")
+def fruit(request):
+    fruits = [
+    "Apple",
+    "Banana",
+    "Mango",
+    "Orange",
+    "Grapes"
+]
+    nums = [
+        1,2,3,4,5
+    ]
+    return render(request,"fruit.html",context={"fruits":fruits,"nums":nums})
     
 def succesful_page(request):
     return HttpResponse('''<h1>This is a Success page Thanks for coming</h>
                         <br>
                         <h3>This page is create in django
                         ''')
-def css_file(request):
-    return HttpResponse('''
-                        <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>icon</title>
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0&icon_names=person" /> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
-</head>
-<body>
-    <span class="material-symbols-outlined">
-person
-</span>
-<span class="material-symbols-outlined">
-search
-</span>
-</body>
-</html>
-''')
+def filtter(request):
+    context = {
+        "name" : "inzamam",
+        "nname" : "Naruto",
+        "lname" : "monkey D. luffy"
+        }
+    return render(request,"filtter.html",context=context)

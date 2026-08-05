@@ -1,5 +1,5 @@
 """
-URL configuration for core project.
+URL configuration for static_project project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/6.0/topics/http/urls/
@@ -19,12 +19,7 @@ from django.urls import path
 from home.views import *
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('admin/', admin.site.urls),    
     path('',home,name="home"),
-    path('contact/',contact,name="contact"),
-    path('about/',about,name="about"),
-    path('fruit/',fruit,name="fruit"),
-    path('filtter/',filtter,name="filtter"),
-    path('success-page',succesful_page,name="success-page"),
-]
 
+]
