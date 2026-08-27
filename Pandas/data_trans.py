@@ -30,3 +30,7 @@ sorted_df. reset_index(drop=True)
 # sorted_df["Ranking"]= sorted_df["Income"].rank(ascending=False, method="max")
 sorted_df[["Id", "Name", "Age", "Country", "Gender", "Income","New_Income", "Tax"]]
 print(sorted_df)
+
+df2 = df.copy()
+new_col_order = [col for col in df2.columns if col !=  "id"] + ["id"]
+print(new_col_order)
