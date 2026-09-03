@@ -8,7 +8,7 @@ This repository documents my progress as I build a strong foundation in Python f
 
 Every folder contains my practice code, exercises, notes, and mini-projects as I learn new technologies step by step.
 
----
+--
 
 # 🎯 Learning Roadmap
 
